@@ -155,6 +155,19 @@ impl Grid<char> {
         grid
     }
 
+    pub fn from_lines(lines: Vec<&str>) -> Grid<char> {
+        let mut grid = Grid::new();
+        let mut new_grid = Vec::new();
+        for line in lines.iter() {
+            let row: Vec<char> = line.chars().collect();
+            new_grid.push(row);
+        }
+        grid.grid = new_grid;
+        grid.height = grid.grid.len() as i32;
+        grid.width = grid.grid[0].len() as i32;
+        grid
+    }
+
     pub fn new_size(w: u32, h: u32) -> Grid<char> {
         Grid {
             grid: vec![vec!['.'; w as usize]; h as usize],
