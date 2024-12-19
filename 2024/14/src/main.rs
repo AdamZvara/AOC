@@ -78,7 +78,7 @@ fn quadrants(robots: &Vec<(Coord, (i32, i32))>, grid: &Grid<char>) -> (i32, i32,
 }
 
 fn main() {
-    let mut robots: Vec<(Coord, (i32, i32))> = parse_input("input14");
+    let mut robots: Vec<(Coord, (i32, i32))> = parse_input("input");
     let mut robots_copy = robots.clone();
     let mut grid: Grid<char> = Grid::new_size(101, 103);
     

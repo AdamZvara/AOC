@@ -173,7 +173,7 @@ fn corners(fences: &HashMap<Coord, Vec<Direction>>) -> u32 {
 }
 
 fn main() {
-    let grid = Grid::from_file_as_chars("input12");
+    let grid = Grid::from_file_as_chars("input");
     let mut unique_plants: Vec<char> = grid.grid.iter().flatten().map(|x| *x).collect();
     unique_plants.sort();
     unique_plants.dedup();

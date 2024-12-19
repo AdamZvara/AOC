@@ -19,10 +19,10 @@ fn parse_input(filename: &str) -> Vec<(Matrix2<f64>, [f64; 2])> {
     let mut result = Vec::new();
     for batch in input.split("\n\n") {
         let lines: Vec<&str> = batch.lines().collect();
-        let A = parse_eq(lines[0]);
-        let B = parse_eq(lines[1]);
+        let a = parse_eq(lines[0]);
+        let b = parse_eq(lines[1]);
         let price = parse_price(lines[2]);
-        result.push((Matrix2::new(A[0], B[0], A[1], B[1]), [price[0], price[1]]));
+        result.push((Matrix2::new(a[0], b[0], a[1], b[1]), [price[0], price[1]]));
     }
     result
 }
@@ -46,7 +46,7 @@ fn cramer(matrix: Matrix2<f64>, price: [f64; 2]) -> Option<[f64; 2]> {
 }
 
 fn main() {
-    let equations = parse_input("input13");
+    let equations = parse_input("input");
 
     let mut sum = 0; 
     for eq in equations.iter() {

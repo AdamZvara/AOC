@@ -277,7 +277,7 @@ fn grid_widen(grid: &Grid<char>) -> Grid<char> {
 }
 
 fn main() {
-    let (grid, moves) = parse_input("input15");
+    let (grid, moves) = parse_input("input");
     let mut game_state = GameState {
         robot: grid.find('@')[0],
         walls: grid.find('#'),
