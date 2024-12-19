@@ -69,7 +69,7 @@ fn fill_map(stones: &Vec<Stone>, map: &mut HashMap<Stone, (StoneCnt, Vec<Stone>)
 
 fn main() {
     let mut stone_map: HashMap<Stone, (StoneCnt, Vec<Stone>)> = HashMap::new();
-    let mut stones: Vec<Stone> = read_stones("input2");
+    let mut stones: Vec<Stone> = read_stones("input11");
     let blinks_part1 = 25;
     let blinks_part2 = 75;
 

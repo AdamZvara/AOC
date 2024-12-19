@@ -21,7 +21,7 @@ fn trail(grid: &base::Grid<i8>, pos: base::Coord, trail_ends: &mut Vec<base::Coo
 }
 
 fn main() {
-    let grid = base::Grid::from_file_as_i8("input1");
+    let grid = base::Grid::from_file_as_i8("input10");
     let trailheads = grid.find(0);
     let mut trail_scores = 0;
     let mut trail_ratings = 0;
